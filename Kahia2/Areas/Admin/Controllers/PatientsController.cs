@@ -55,7 +55,7 @@ namespace Kahia2.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPatient,Poids,SituationMatrimoniale,GroupeSanguin,Age,Taille,Sexe")] Patient patient)
+        public async Task<IActionResult> Create([Bind("Poids,SituationMatrimoniale,GroupeSanguin,Age,Taille,Sexe")] Patient patient)
         {
             if (ModelState.IsValid)
             {

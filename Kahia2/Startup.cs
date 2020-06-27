@@ -32,7 +32,7 @@ namespace Kahia2
            // services.AddScoped<UserManager<Utilisateur>, UserManager<Utilisateur>>();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("Kahia2Context")));
             services.AddIdentity<Utilisateur,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -41,7 +41,7 @@ namespace Kahia2
             services.AddRazorPages();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseSqlServer(Configuration.GetConnectionString("Kahia2Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

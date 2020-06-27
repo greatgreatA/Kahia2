@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Kahia2.Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Kahia2.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class ListeMembresModel : PageModel
     {
         private readonly UserManager<Utilisateur> userManager;

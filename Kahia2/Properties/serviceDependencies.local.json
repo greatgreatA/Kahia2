@@ -7,6 +7,12 @@
     "mssql2": {
       "type": "mssql.local",
       "connectionId": "Kahia2Context"
+    },
+    "mssql3": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/serveurpourwinde/databases/Kahia2_db",
+      "type": "mssql.azure",
+      "connectionId": "Kahia2Context",
+      "secretStore": "LocalSecretsFile"
     }
   }
 }

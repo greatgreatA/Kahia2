@@ -19,7 +19,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Kahia2.Areas.Identity.Pages.Account
 {
-    [AllowAnonymous]
+    [Authorize]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<Utilisateur> _signInManager;
