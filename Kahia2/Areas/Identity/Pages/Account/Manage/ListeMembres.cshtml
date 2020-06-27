@@ -1,0 +1,27 @@
+﻿@page
+@model Kahia2.Areas.Identity.Pages.Account.Manage.ListeMembresModel
+@{
+}
+<table class="table  table-striped">
+    <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>   
+    <tbody>
+        @foreach (Kahia2.Admin.Models.Utilisateur u in ViewData["USERS"] as IEnumerable<Kahia2.Admin.Models.Utilisateur>)
+        {
+            <tr>
+                <td>@u.Prenom</td>
+                <td>@u.Nom</td>
+                <td>@u.Email</td>
+                <td>@u.Role</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
